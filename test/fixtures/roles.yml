@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: 
+  dateCreation: 2018-09-06
+  dateUpdate: 2018-09-06
+
+two:
+  description: 
+  dateCreation: 2018-09-06
+  dateUpdate: 2018-09-06

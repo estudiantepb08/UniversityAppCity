@@ -1,0 +1,37 @@
+<%= form_with(model: topic, local: true) do |form| %>
+  <% if topic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+
+      <ul>
+      <% topic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :topic_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :topic_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateCreation %>
+    <%= form.date_select :dateCreation, id: :topic_dateCreation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateUpdate %>
+    <%= form.date_select :dateUpdate, id: :topic_dateUpdate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
